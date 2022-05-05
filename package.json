@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
+    "panic-overlay": "^1.0.51",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
@@ -14,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
+    "url": "https://github.com/ramirostUW/open-react-template-parcel.git"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url https://ramirostuw.github.io/open-react-template-parcel/ && rm -rf docs && mv dist docs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"restart": "react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
   }
 }
